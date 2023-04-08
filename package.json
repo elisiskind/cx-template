@@ -1,0 +1,19 @@
+{
+  "name": "cx-template",
+  "packageManager": "yarn@3.5.0",
+  "dependencies": {
+    "esbuild": "^0.17.15",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  },
+  "workspaces": [
+    "cx",
+    "scripts"
+  ],
+  "eslintConfig": {
+    "extends": "eslint:recommended"
+  }
+}

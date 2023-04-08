@@ -1,0 +1,24 @@
+{
+  "name": "@cx-template/cx",
+  "version": "0.0.1",
+  "description": "Template for building Chrome Extensions using React, Typescript, and ESBuild",
+  "dependencies": {
+    "@types/node-rsa": "^1.1.1",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "eslint-config-react-app": "^7.0.1",
+    "http-server": "^14.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "scripts": {
+    "build": "esbuild src/app/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js && cp src/popup/index.html public",
+    "serve": "rm -rf public && yarn build && http-server public",
+    "setup": "esr ../../cx-template/scripts/src/initialize-keys.ts"
+  }
+}

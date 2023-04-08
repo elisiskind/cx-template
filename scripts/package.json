@@ -1,0 +1,27 @@
+{
+  "name": "@cx-template/scripts",
+  "version": "0.0.1",
+  "description": "Scripts for building and setting up the project",
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "@types/node-rsa": "^1.1.1",
+    "chalk": "4.1.2",
+    "esbuild": "^0.17.15",
+    "esbuild-runner": "^2.2.2",
+    "node-rsa": "^1.1.1"
+  },
+  "scripts": {
+    "scripts:setup": "esr src/initialize-keys.ts",
+    "scripts:manifest": "esr src/create-manifest.ts"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": "latest"
+    },
+    "env": {
+      "node": true,
+      "commonjs": true
+    }
+  }
+}
